@@ -1,0 +1,16 @@
+.jumbotron{
+    background: #f1e32098;
+}
+#about{
+    background: #f3f4f5;
+}
+#skill{
+    background: #f1e32098;
+}
+#footer{
+    background: #f3f4f5;
+}
+.card{
+    margin: auto;
+    margin-bottom: 20px;
+}
