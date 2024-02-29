@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gunawan - Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Keania+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="asset/img/ninja.png">
+  </head>
+  <body class="bg-indigo-800">
+    <header class="bg-indigo-900">
+      <div class="container px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+          <div class="flex-shrink-0">
+            <span class="text-5xl">Gunawan</span>
+          </div>
+          <div>
+            <ul class="flex gap-10 text-xl px-2">
+              <li class="hover:text-amber-600">
+                <a href="index.html"> Home </a>
+              </li>
+              <li class="hover:text-amber-600">
+                <a href="about.html">
+                  About
+                </a>
+              </li>
+              <li class="hover:text-amber-600">
+                <a href="education.html">Education</a>
+              </li>
+              <li class="hover:text-amber-600">
+                <a href="projects.html" class="text-amber-600">
+                    Projects
+                    <div class="w-10 h-2 bg-amber-600"></div>
+                </a>
+            </li>
+              <li class="hover:text-amber-600">
+                <a href="resume.html">Resume</a>
+              </li>
+              <li class="hover:text-amber-600"><a href="contact.html">Contact</a></li>
+              <li class="hover:text-amber-600 hidden"><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container mx-auto px-9">
+      <h1 class="text-2xl mt-8">My Projects</h1>
+      <ul class="flex mt-4 gap-2">
+        <li class="bg-amber-600 py-1 px-4 shadow-md" id="All" onclick="showProject('All')" style="cursor: pointer;">All</li>
+        <li class="bg-indigo-900 py-1 px-4 shadow-md" id="Android" onclick="showProject('Android')" style="cursor: pointer;">Android</li>
+        <li class="bg-indigo-900 py-1 px-4 shadow-md" id="Java" onclick="showProject('Java')" style="cursor: pointer;">Java</li>
+        <li class="bg-indigo-900 py-1 px-4 shadow-md" id="Website" onclick="showProject('Website')" style="cursor: pointer;">Website</li>
+      </ul>
+
+      <div class="grid grid-cols-4 gap-8 mt-4 mb-8" id="ProjectList">
+        
+      </div>
+
+    </div>
+
+    <script>
+        
+        var lis = ['All', 'Android', 'Java', 'Website'];
+        var projects = {
+            "All" : [
+            {
+                    "name": "Dicoding Story",
+                    "image": "asset/img/storyapp.png",
+                    "link": "https://github.com/Gunawann20/MyStory_App"
+                },
+                {
+                    "name": "WasteLess",
+                    "image": "asset/img/wasteless.png",
+                    "link": "https://github.com/C23-PC629-WasteLess-Indonesia"
+                },
+                {
+                    "name": "Rest API Pragos Academy",
+                    "image": "asset/img/pragosapi.png",
+                    "link": "https://github.com/Edu-Pulse/pragos-academy-api"
+                },
+                {
+                    "name": "Landingpage PT Wergu Wijaya Sakti",
+                    "image": "asset/img/werguyasa.png",
+                    "link": "https://werguyasa.id/"
+                }
+            ],
+            "Android" : [
+                {
+                    "name": "Dicoding Story",
+                    "image": "asset/img/storyapp.png",
+                    "link": "https://github.com/Gunawann20/MyStory_App"
+                },
+                {
+                    "name": "WasteLess",
+                    "image": "asset/img/wasteless.png",
+                    "link": "https://github.com/C23-PC629-WasteLess-Indonesia"
+                }
+            ],
+            "Java" : [
+                {
+                    "name": "Rest API Pragos Academy",
+                    "image": "asset/img/pragosapi.png",
+                    "link": "https://github.com/Edu-Pulse/pragos-academy-api"
+                }
+            ],
+            "Website" : [
+                {
+                    "name": "Landingpage PT Wergu Wijaya Sakti",
+                    "image": "asset/img/werguyasa.png",
+                    "link": "https://werguyasa.id/"
+                }
+            ]
+        }
+
+        function showProject(params) {
+            var li = document.getElementById(params);
+            lis.forEach(element => {
+                if (params == element) {
+                    li.setAttribute("class", "bg-amber-600 py-1 px-4 shadow-md");
+                    showListProjectById(params);
+                }else{
+                    document.getElementById(element).setAttribute("class", "bg-indigo-900 py-1 px-4 shadow-md");
+                }
+            });
+            
+        }
+
+        function showListProjectById(id) {
+            var projectsById = projects[id];
+            var parentElementDiv = document.getElementById("ProjectList")
+            parentElementDiv.innerHTML = "";
+            projectsById.forEach(value => {
+
+              var elementLink = document.createElement('a')
+                var elementH = document.createElement('h2');
+                var elementDiv = document.createElement('div');
+                var elementImg = document.createElement('img');
+
+                elementH.textContent = value["name"];
+                elementLink.setAttribute("href", value["link"])
+                elementH.setAttribute("class", "mb-2 text-center")
+                elementImg.setAttribute("src", value["image"]);
+                elementImg.setAttribute("class", "rounded shadow-md w-96 h-52");
+
+                elementDiv.appendChild(elementH);
+                elementDiv.appendChild(elementImg);
+                elementLink.appendChild(elementDiv)
+                parentElementDiv.appendChild(elementLink);
+            })
+        }
+
+        showListProjectById("All");
+    </script>
+  </body>
+</html>
