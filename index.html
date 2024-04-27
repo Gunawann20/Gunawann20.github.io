@@ -1,102 +1,130 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gunawan - Portofolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="asset/img/ninja.png">
+    <link rel="stylesheet" href="style/index-style.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Keania+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="asset/img/ninja.png">
-  </head>
-  <body class="bg-blue-950 h-screen">
-    <div class="flex justify-center items-center pt-60">
-      <section class="py-10 sm:py-16 lg:py-24">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
-            <div>
-              <h1 class="text-4xl font-medium sm:text-6xl lg:text-8xl mb-1">
-                Gunawan
-              </h1>
-              <h2 class="text-4xl flex px-2">
-                Hi, Folks!
-                <img
-                  src="asset/img/hand.gif"
-                  alt=""
-                  srcset=""
-                  class="w-12 h-10"
-                />
-              </h2>
-              <h2 class="text-4xl px-2">
-                I'm
-                <span class="text-amber-600">Software Engineer - Android</span>
-              </h2>
-
-              <ul class="mt-8 flex gap-10 text-2xl px-2">
-                <li class="text-amber-600">
-                  <a href="">
-                    Home
-                    <div class="w-10 h-2 bg-amber-600"></div>
-                  </a>
-                </li>
-                <li class="hover:text-amber-600">
-                  <a href="about.html">About</a>
-                </li>
-                <li class="hover:text-amber-600">
-                  <a href="education.html">Education</a>
-                </li>
-                <li class="hover:text-amber-600"><a href="projects.html">Projects</a></li>
-                <li class="hover:text-amber-600">
-                  <a href="resume.html">Resume</a>
-                </li>
-                <li class="hover:text-amber-600"><a href="contact.html">Contact</a></li>
-                <li class="hover:text-amber-600 hidden"><a href="#">Blogs</a></li>
-              </ul>
-
-              <ul class="mt-8 flex gap-4 text-2xl px-2">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="/asset/img/menu.png" alt="" srcset="" onclick="showModal()" id="menu">
+        </nav>
+        <div class="modal" id="modal">
+            <ul>
                 <li>
-                  <a href="https://github.com/Gunawann20"
-                    ><div class="w-10 h-10 bg-white rounded hover:bg-amber-600">
-                      <img
-                        src="asset/img/github.png"
-                        alt="Github"
-                        class="w-10 h-10"
-                      /></div
-                  ></a>
+                    <a href="index.html" style="color: #FBA834;">
+                        <span class="home">Home</span>
+                    </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/gunawan-8b44b7214/"
-                    ><div class="w-10 h-10 bg-white rounded hover:bg-amber-600">
-                      <img
-                        src="asset/img/linkedin.png"
-                        alt="Linked in"
-                        class="w-10 h-10"
-                      /></div
-                  ></a>
+                    <a href="about.html">
+                        <span>About</span>
+                    </a>
                 </li>
                 <li>
-                  <a href="contact.html"
-                    ><div class="w-10 h-10 bg-white rounded hover:bg-amber-600">
-                      <img
-                        src="asset/img/email.png"
-                        alt="Email"
-                        class="w-10 h-10"
-                      /></div
-                  ></a>
+                    <a href="education.html">
+                        <span>Education</span>
+                    </a>
                 </li>
-              </ul>
-            </div>
-          </div>
+                <li>
+                    <a href="">
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="resume.html">
+                        <span>Resume</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-      </section>
+        <main>
+            <h1>
+                Gunawan
+            </h1>
+            <h2>
+                <div class="text-animation">
+                    Hi, Folks!
+                    <img
+                    src="asset/img/hand.gif"
+                    alt="hand"
+                    class="hand-animation"
+                    />
+                </div>
+            </h2>
+            <h2>I’m <span class="text-gold">Software Engineer - Android</span></h2>
+            <ul class="routing">
+                <li>
+                    <a href="index.html">
+                        <h3 class="home">Home</h3>
+                    </a>
+                    <div class="box"></div>
+                </li>
+                <li>
+                    <a href="about.html">
+                        <h3>About</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="education.html">
+                        <h3>Education</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>Projects</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="resume.html">
+                        <h3>Resume</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>Contact</h3>
+                    </a>
+                </li>
+            </ul>
+            <ul class="social-media">
+                <li class="li-github">
+                    <img src="asset/img/github.png" alt="github" class="github">
+                </li>
+                <li class="li-linkedin">
+                    <img src="asset/img/linkedin.png" alt="linkedin" class="linkedin">
+                </li>
+                <li class="li-email">
+                    <img src="asset/img/email.png" alt="email" class="email">
+                </li>
+            </ul>
+        </main>
+        <footer>
+            Made with ❤️ by Gunawan
+        </footer>
     </div>
-    <footer class="flex px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 mt-28">
-      <div class="p-2">Made with ❤️ by Gunawan</div>
-    </footer>
-  </body>
+
+    <script type="text/javascript">
+        function showModal() {
+            if (document.getElementById("modal").style.display == "block") {
+                document.getElementById("modal").style.display = "none";
+                document.getElementById("menu").setAttribute("src", "asset/img/menu.png")
+            }else{
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("menu").setAttribute("src", "asset/img/Close.png")
+            }
+        }
+    </script>
+</body>
 </html>

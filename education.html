@@ -1,147 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gunawan - Education</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunawan - About</title>
+    <link rel="icon" type="image/x-icon" href="asset/img/ninja.png">
+    <link rel="stylesheet" href="style/education-style.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Keania+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="asset/img/ninja.png">
-  </head>
-  <body class="bg-indigo-800">
-    <header class="bg-indigo-900">
-      <div class="container px-4 mx-auto sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16 lg:h-20">
-          <div class="flex-shrink-0">
-            <span class="text-5xl">Gunawan</span>
-          </div>
-          <div>
-            <ul class="flex gap-10 text-xl px-2">
-              <li class="hover:text-amber-600">
-                <a href="index.html"> Home </a>
-              </li>
-              <li>
-                <a href="about.html"> About </a>
-              </li>
-              <li class="hover:text-amber-600">
-                <a href="education.html" class="text-amber-600">
-                  Education
-                  <div class="w-10 h-2 bg-amber-600"></div>
-                </a>
-              </li>
-              <li class="hover:text-amber-600"><a href="projects.html">Projects</a></li>
-              <li class="hover:text-amber-600"><a href="resume.html">Resume</a></li>
-              <li class="hover:text-amber-600"><a href="contact.html">Contact</a></li>
-              <li class="hover:text-amber-600 hidden"><a href="#">Blogs</a></li>
+</head>
+<body>
+    <nav>
+        <h1 class="text-logo">
+            Gunawan
+        </h1>
+        <ul class="routing">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="" style="color: #FBA834;">Education</a>
+                <div class="box" style="background-color: #FBA834; width: 50px; height: 8px;"></div>
+            </li>
+            <li>
+                <a href="">Projects</a>
+            </li>
+            <li>
+                <a href="resume.html">Resume</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+        </ul>
+        <img src="/asset/img/menu.png" alt="" srcset="" onclick="showModal()" id="menu">
+    </nav>
+    <div class="container">
+        <div class="modal" id="modal">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="home">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        <span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" style="color: #FBA834;">
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="resume.html">
+                        <span>Resume</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Contact</span>
+                    </a>
+                </li>
             </ul>
-          </div>
         </div>
-      </div>
-    </header>
-    <div class="container mx-auto px-9">
-      <h1 class="text-2xl mt-8">Education & Training</h1>
-      <div class="grid grid-cols-4 gap-8 mt-2">
-        <div class="bg-indigo-900 font-sans shadow-md rounded">
-          <img src="asset/img/image 5.png" alt="" srcset="" />
-          <div class="p-2">
-            <h2 class="text-xl"><b>Universitas Negeri Semarang</b></h2>
-            <span class="font-normal text-base">
-              Sep 2020 - Jan 2024 <br />
-              Bachelor's Degree in Informatics - S.Kom. <br /><br />
-              Grade : 3.81/4.00 (GPA)
-            </span>
-          </div>
-        </div>
-        <div class="bg-indigo-900 font-sans shadow-md rounded">
-          <img src="asset/img/image 5-1.png" alt="" srcset="" />
-          <div class="p-2">
-            <h2 class="text-xl"><b>Bangkit Academy 2023 Batch 1</b></h2>
-            <span class="font-normal text-base">
-              Feb 2023 - Agust 2023 <br />
-              Mobile Development <br /><br />
-              Grade : 89.5/100 (GPA)
-            </span>
-          </div>
-        </div>
-        <div class="bg-indigo-900 font-sans shadow-md rounded">
-          <img src="asset/img/image 5-2.png" alt="" srcset="" />
-          <div class="p-2">
-            <h2 class="text-xl"><b>SIB Batch 5 Binar Academy</b></h2>
-            <span class="font-normal text-base">
-              Agust 2023 - Des 2023 <br />
-              Backend Java Course <br /><br />
-              Grade : 4.6/5.0 (GPA)
-            </span>
-          </div>
-        </div>
-      </div>
-      <h1 class="text-2xl mt-8">Certifications</h1>
-      <div class="grid grid-cols-4 gap-8 mt-2 mb-8">
-        <div class="hover:opacity-50" onclick="showModal('asset/file/A286DSX1403.pdf')" style="cursor: pointer;">
-            <img src="asset/img/bangkit.png" alt="" srcset="" class="rounded shadow-md w-96 h-52">
-        </div>
-        <div class="hover:opacity-50" onclick="showModal('asset/file/binar.pdf')" style="cursor: pointer;">
-          <img src="asset/img/binar.png" alt="" srcset="" class="rounded shadow-md w-96 h-52">
-        </div>
-        <div class="hover:opacity-50" onclick="showModal('asset/file/sertifikat_course_android_fundamental.pdf')" style="cursor: pointer;">
-          <img src="asset/img/android_fundamental.png" alt="" srcset="" class="rounded shadow-md w-96 h-52">
-        </div>
-        <div class="hover:opacity-50" onclick="showModal('asset/file/sertifikat_course_android_intermediate.pdf')" style="cursor: pointer;">
-          <img src="asset/img/android_intermediate.png" alt="" srcset="" class="rounded shadow-md w-96 h-52">
-        </div>
-        <div class="hover:opacity-50" onclick="showModal('asset/file/sertifikat_course_jetpack.pdf')" style="cursor: pointer;">
-          <img src="asset/img/jetpack.png" alt="" srcset="" class="rounded shadow-md w-96 h-52">
-        </div>
-        <div class="hover:opacity-50" onclick="showModal('asset/file/sertifikat_course_software.pdf')" style="cursor: pointer;">
-          <img src="asset/img/software.png" alt="" srcset="" class="rounded shadow-md w-96 h-52">
-        </div>
-        <div class="hover:opacity-50" onclick="showModal('asset/file/sertifikat_course_solid.pdf')" style="cursor: pointer;">
-          <img src="asset/img/solid.png" alt="" srcset="" class="rounded shadow-md w-96 h-52">
-        </div>
-        <div class="hover:opacity-50" onclick="showModal('asset/file/sertifikat_course_sql.pdf')" style="cursor: pointer;">
-          <img src="asset/img/sql.png" alt="" srcset="" class="rounded shadow-md w-96 h-52">
-        </div>
-        <div class="hover:opacity-50" onclick="showModal('asset/file/sertifikat_course_uxdesign.pdf')" style="cursor: pointer;">
-          <img src="asset/img/uxdesign.png" alt="" srcset="" class="rounded shadow-md w-96 h-52">
-        </div>
-      </div>
+        <main>
+            <h2>Education & Training</h2>
+            <div class="education">
+                <div class="unnes">
+                    <img src="asset/img/image 5.png" alt="" width="335px">
+                    <div class="edu-text">
+                        <h3>Universitas Negeri Semarang</h3>
+                        <span>Sep 2020 - Jan 2024</span><br>
+                        <span>Bachelor's Degree in Informatics - S.Kom.</span><br>
+                        <span>Grade : 3.81/4.00 (GPA)</span>
+                    </div>
+                </div>
+                <div class="bangkit">
+                    <img src="asset/img/image 5-1.png" alt="" width="335px">
+                    <div class="edu-text">
+                        <h3>Bangkit Academy 2023 Batch 1</h3>
+                        <span>Feb 2023 - Agust 2023</span><br>
+                        <span>Mobile Development</span><br>
+                        <span>Grade : 89.5/100 (GPA)</span>
+                    </div>
+                </div>
+                <div class="binar">
+                    <img src="asset/img/image 5-2.png" alt="" width="335px">
+                    <div class="edu-text">
+                        <h3>SIB Batch 5 Binar Academy</h3>
+                        <span>Agust 2023 - Des 2023</span><br>
+                        <span>Backend Java Course</span><br>
+                        <span>Grade : 4.6/5.0 (GPA)</span>
+                    </div>
+                </div>
+            </div>
+            <h2>Certification</h2>
+            <div class="certifications">
+                <div>
+                    <img src="asset/img/bangkit.png" alt="" width="335px">
+                </div>
+                <div>
+                    <img src="asset/img/binar.png" alt="" width="335px">
+                </div>
+                <div>
+                    <img src="asset/img/android_fundamental.png" alt="" width="335px">
+                </div>
+                <div>
+                    <img src="asset/img/android_intermediate.png" alt="" width="335px">
+                </div>
+                <div>
+                    <img src="asset/img/jetpack.png" alt="" width="335px">
+                </div>
+                <div>
+                    <img src="asset/img/solid.png" alt="" width="335px">
+                </div>
+                <div>
+                    <img src="asset/img/software.png" alt="" width="335px">
+                </div>
+                <div>
+                    <img src="asset/img/uxdesign.png" alt="" width="335px">
+                </div>
+                <div>
+                    <img src="asset/img/sql.png" alt="" width="335px">
+                </div>
+            </div>
+        </main>
+        <footer>
+            Made with ❤️ by Gunawan
+        </footer>
     </div>
-
-      <div id="myModal" class="modal">
-        <div class="rounded-md modal-content">
-          <span class="close">&times;</span>
-          <embed id="PDF" src="" class="w-full h-96"/>
-        </div>
-      </div>
-
-
-
-    <script>
-      var modal = document.getElementById("myModal");
-      var span = document.getElementsByClassName("close")[0];
-      var embed = document.getElementById("PDF");
-
-
-      function showModal(url) {
-        modal.style.display = "block";
-        embed.setAttribute("src", url);
-      }
-
-      span.onclick = function() {
-        modal.style.display = "none";
-      }
-      
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
+    <script type="text/javascript">
+        function showModal() {
+            if (document.getElementById("modal").style.display == "block") {
+                document.getElementById("modal").style.display = "none";
+                document.getElementById("menu").setAttribute("src", "asset/img/menu.png")
+            }else{
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("menu").setAttribute("src", "asset/img/Close.png")
+            }
         }
-      }
-      </script>
-  </body>
+    </script>
+</body>
 </html>

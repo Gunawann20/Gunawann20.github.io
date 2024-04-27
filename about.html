@@ -1,129 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gunawan - About</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="asset/img/ninja.png">
+    <link rel="stylesheet" href="style/about-style.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Keania+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="asset/img/ninja.png">
-  </head>
-  <body class="bg-indigo-800">
-    <header class="bg-indigo-900">
-      <div class="container px-4 mx-auto sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16 lg:h-20">
-          <div class="flex-shrink-0">
-            <span class="text-5xl">Gunawan</span>
-          </div>
-          <div>
-            <ul class="flex gap-10 text-xl px-2">
-              <li class="hover:text-amber-600">
-                <a href="index.html"> Home </a>
-              </li>
-              <li>
-                <a href="about.html" class="text-amber-600">
-                  About
-                  <div class="w-10 h-2 bg-amber-600"></div>
-                </a>
-              </li>
-              <li class="hover:text-amber-600">
+</head>
+<body>
+    <nav>
+        <h1 class="text-logo">
+            Gunawan
+        </h1>
+        <ul class="routing">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="" style="color: #FBA834;">About</a>
+                <div class="box" style="background-color: #FBA834; width: 30px; height: 8px;"></div>
+            </li>
+            <li>
                 <a href="education.html">Education</a>
-              </li>
-              <li class="hover:text-amber-600"><a href="projects.html">Projects</a></li>
-              <li class="hover:text-amber-600">
+            </li>
+            <li>
+                <a href="">Projects</a>
+            </li>
+            <li>
                 <a href="resume.html">Resume</a>
-              </li>
-              <li class="hover:text-amber-600"><a href="contact.html">Contact</a></li>
-              <li class="hover:text-amber-600 hidden"><a href="#">Blogs</a></li>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+        </ul>
+        <img src="/asset/img/menu.png" alt="" srcset="" onclick="showModal()" id="menu">
+    </nav>
+    <div class="container">
+        <div class="modal" id="modal">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="home">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html" style="color: #FBA834;">
+                        <span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="education.html">
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="resume.html">
+                        <span>Resume</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Contact</span>
+                    </a>
+                </li>
             </ul>
-          </div>
         </div>
-      </div>
-    </header>
-    <div class="container mx-auto px-9">
-      <h1 class="text-2xl mt-8">About</h1>
-      <div class="flex mt-2 gap-44">
-        <img src="asset/img/photo.jpg" alt="" srcset="" />
-        <span class="font-sans">
-          Saya merupakan seorang lulusan teknik informatika yang memiliki
-          ketertarikan dalam bidang aplikasi berbasis web dan android. Saya
-          memiliki kemampuan dalam bahasa pemrograman seperti PHP, Java, dan
-          Kotlin. Saya juga menguasai beberapa framework seperti Laravel, Java
-          spring, dan Android SDK. <br />
-          Selama studi saya, saya telah mengikuti berbagai kegiatan untuk
-          memperluas pengetahuan saya dalam pemrograman web maupun android. Saya
-          memiliki pengalam dalam pengembangan web sistem informasi manufaktur
-          PT Allure Allumunio pada kegiatan Kedaireka. Saya juga memiliki
-          pengalaman mengikuti program Bangkit Academy 2023 dengan mengambil
-          learning path Mobile Development, dan mengikukti program Studi
-          Independen di Binar Academy dengan mengambil learning path Backend
-          Java Course. <br />
-          Saya memiliki minat yang kuat dalam teknologi dan selalu mencari cara
-          untuk meningkatkan keterampilan saya. Saya senang belajar hal-hal baru
-          dan terus berinovasi untuk membuat solusi teknologi yang lebih baik
-          dan lebih efektif. Saya percaya bahwa dengan kemampuan saya dalam web
-          dan android programing, saya dapat memberikan kontribusi yang
-          signiykan dalam bidang teknologi informasi dan membawa manfaat positif
-          bagi masyarakat.
-        </span>
-      </div>
-      <h1 class="text-2xl mt-8">Skills & Tools</h1>
-      <div class="grid grid-cols-4 gap-8 mt-2">
-        <div
-          class="flex items-center justify-center gap-4 bg-indigo-900 shadow-md"
-        >
-          <img src="asset/img/image 4.png" alt="" />
-          <span>Android</span>
-        </div>
-        <div
-          class="flex items-center justify-center gap-4 bg-indigo-900 shadow-md"
-        >
-          <img src="asset/img/image 4-2.png" alt="" />
-          <span>Kotlin</span>
-        </div>
-        <div
-          class="flex items-center justify-center gap-4 bg-indigo-900 shadow-md"
-        >
-          <img src="asset/img/image 4-4.png" alt="" />
-          <span>Java</span>
-        </div>
-        <div
-          class="flex items-center justify-center gap-4 bg-indigo-900 shadow-md"
-        >
-          <img src="asset/img/image 4-3.png" alt="" />
-          <span>Spring Boot</span>
-        </div>
-        <div
-          class="flex items-center justify-center gap-4 bg-indigo-900 shadow-md"
-        >
-          <img src="asset/img/image 4-1.png" alt="" />
-          <span>PHP</span>
-        </div>
-        <div
-          class="flex items-center justify-center gap-4 bg-indigo-900 shadow-md"
-        >
-          <img src="asset/img/image 4-5.png" alt="" />
-          <span>Laravel</span>
-        </div>
-        <div
-          class="flex items-center justify-center gap-4 bg-indigo-900 shadow-md"
-        >
-          <img src="asset/img/image 4-7.png" alt="" />
-          <span>HTML</span>
-        </div>
-        <div
-          class="flex items-center justify-center gap-4 bg-indigo-900 shadow-md"
-        >
-          <img src="asset/img/image 4-6.png" alt="" />
-          <span>Tailwind CSS</span>
-        </div>
-      </div>
+        <main>
+            <h2>About</h2>
+            <article class="summary">
+                <img src="asset/img/photo.jpg" alt="" srcset="">
+                <p>Saya merupakan seorang lulusan teknik informatika yang memiliki ketertarikan dalam bidang aplikasi berbasis web dan android. Saya memiliki kemampuan dalam bahasa pemrograman seperti PHP, Java, dan Kotlin. Saya juga menguasai beberapa framework seperti Laravel, Java spring, dan Android SDK.
+                    Selama studi saya, saya telah mengikuti berbagai kegiatan untuk memperluas pengetahuan saya dalam pemrograman web maupun android. Saya memiliki pengalam dalam pengembangan web sistem informasi manufaktur PT Allure Allumunio pada kegiatan Kedaireka. Saya juga memiliki pengalaman mengikuti program Bangkit Academy 2023 dengan mengambil learning path Mobile Development, dan mengikukti program Studi Independen di Binar Academy dengan mengambil learning path Backend Java Course.
+                    Saya memiliki minat yang kuat dalam teknologi dan selalu mencari cara untuk meningkatkan keterampilan saya. Saya senang belajar hal-hal baru dan terus berinovasi untuk membuat solusi teknologi yang lebih baik dan lebih efektif. Saya percaya bahwa dengan kemampuan saya dalam web dan android programing, saya dapat memberikan kontribusi yang signiykan dalam bidang teknologi informasi dan membawa manfaat positif bagi masyarakat.
+                </p>
+            </article>
+            <article>
+                <h2>Skill & Tools</h2>
+                <div class="grid">                    
+                    <div class="android box-skill">
+                        <img src="asset/img/android.png" alt="" srcset="">
+                        <span>Android</span>
+                    </div>
+                    <div class="kotlin box-skill">
+                        <img src="asset/img/kotlin.png" alt="" srcset="">
+                        <span>Kotlin</span>
+                    </div>
+                    <div class="java box-skill">
+                        <img src="asset/img/java.png" alt="" srcset="">
+                        <span>Java</span>
+                    </div>
+                    <div class="spring box-skill">
+                        <img src="asset/img/spring.png" alt="" srcset="">
+                        <span>Spring Boot</span>
+                    </div>
+                </div>
+                <div class="grid">                    
+                    <div class="php box-skill">
+                        <img src="asset/img/php.png" alt="" srcset="">
+                        <span>PHP</span>
+                    </div>
+                    <div class="laravel box-skill">
+                        <img src="asset/img/laravel.png" alt="" srcset="">
+                        <span>Laravel</span>
+                    </div>
+                    <div class="html box-skill">
+                        <img src="asset/img/html.png" alt="" srcset="">
+                        <span>HTML</span>
+                    </div>
+                    <div class="tailwind box-skill">
+                        <img src="asset/img/tailwind.png" alt="" srcset="">
+                        <span>Tailwind CSS</span>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer>
+            Made with ❤️ by Gunawan
+        </footer>
     </div>
-  </body>
+    <script type="text/javascript">
+        function showModal() {
+            if (document.getElementById("modal").style.display == "block") {
+                document.getElementById("modal").style.display = "none";
+                document.getElementById("menu").setAttribute("src", "asset/img/menu.png")
+            }else{
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("menu").setAttribute("src", "asset/img/Close.png")
+            }
+        }
+    </script>
+</body>
 </html>

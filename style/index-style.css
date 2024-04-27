@@ -1,0 +1,215 @@
+body {
+    font-family: "Keania One", sans-serif;
+    background-color: #090F44;
+    color: aliceblue;
+    height: max-content;
+}
+
+.container {
+    margin: auto;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 15%;
+}
+
+nav {
+    display: none;
+}
+
+h1 {
+    font-size: 100px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 36px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.text-animation {
+    display: flex;
+}
+.hand-animation {
+    width: 40px;
+}
+.text-gold {
+    color: #FBA834;
+}
+
+.routing, .social-media {
+    list-style: none;
+    display:flex;
+    padding: 0;
+}
+
+ul li .github {
+    width: 40px;
+}
+
+
+.social-media li{
+    background-color: aliceblue;
+    border-radius: 10%;
+    margin-right: 20px;
+}
+.routing {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.routing li {
+    margin-right: 30px;
+}
+
+.routing li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.routing .home {
+    color: #FBA834;
+}
+.routing .box {
+    background-color: #FBA834;
+    width: 50px;
+    height: 8px;
+}
+.routing li a:hover {
+    color: #FBA834;
+}
+
+footer {
+    position: absolute;
+    bottom: 30px;
+}
+
+#modal {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        font-family: "Keania One", sans-serif;
+        background-color: #090F44;
+        color: aliceblue;
+        height: max-content;
+    }
+    .container {
+        margin: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-top: 4%;
+    }
+
+    nav {
+        display: block;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 60px;
+        margin: 0;
+        margin-top: 150px;
+    }
+    
+    h2 {
+        font-size: 16px;
+        margin: 0;
+    }
+    
+    h3 {
+        font-size: 24px;
+        margin: 0;
+    }
+    
+    .text-animation {
+        display: flex;
+    }
+    .hand-animation {
+        width: 20px;
+    }
+    .text-gold {
+        color: #FBA834;
+    }
+    
+    ul li .github , .email , .linkedin {
+        width: 25px;
+    }
+    
+    
+    .social-media li{
+        background-color: aliceblue;
+        border-radius: 10%;
+        margin-right: 0px;
+        padding: 3px;
+    }
+
+    .li-linkedin{
+        margin-left: 10px;
+    }
+
+    .li-email{
+        margin-left: 10px;
+    }
+
+    
+    .routing {
+        display: none;
+    }
+    
+    footer {
+        font-size: 10px;
+        position: absolute;
+        bottom: 30px;
+    }
+
+    #modal {
+        background-color: aliceblue;
+        display: none;
+        color: black;
+        position: absolute;
+        width: 85%;
+        padding-top: 2px;
+        padding-bottom: 5px;
+        border-radius: 2%;
+        margin-top: 20px;
+    }
+
+    #modal ul {
+        list-style: none;
+    }
+    #modal ul li{
+        list-style: none;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    #modal ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 14pt;
+    }
+
+    #modal ul li a:hover {
+        text-decoration: none;
+        color: #FBA834;
+        font-size: 14pt;
+    }
+
+    .tombol {
+        background-color: navy;
+    }
+  }
+
+
+
