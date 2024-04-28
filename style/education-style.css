@@ -156,5 +156,18 @@ footer {
         display: flex;
         flex-wrap: wrap;
     }
+
+    .education img{
+        width: 100%;
+    }
+
+    .unnes, .bangkit, .binar {
+        width: 100%;
+        background-color: black;
+    }
+
+    .certifications img {
+        width: 100%;
+    }
 }
 
