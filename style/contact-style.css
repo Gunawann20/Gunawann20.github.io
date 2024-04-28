@@ -57,29 +57,40 @@ ul li a:hover {
     font-size: 16pt;
 }
 
+.link-projects {
+    display: flex;
+    gap: 4px;
+}
 
-.education {
+.contact {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
-.unnes, .bangkit, .binar {
-    width: 335px;
-    background-color: black;
-}
-.edu-text {
-    padding: 8px;
+
+.email, .telepon, .linkedin {
+    display: flex;
+    gap: 10px;
+    width: 46%;
+    align-items: center;
+    color: black;
+    background-color: aliceblue;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    padding: 10px;
 }
 
-.certifications {
+.linkedin a{
+    text-decoration: none;
+    color: black;
+    align-items: center;
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
 }
+
 footer {
-    position: relative;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    position: absolute;
+    bottom: 20px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -111,12 +122,6 @@ footer {
     
     .routing {
         display: none;
-    }
-    
-    footer {
-        position: relative;
-        margin-top: 40px;
-        font-size: 10px;
     }
 
     #modal {
@@ -152,9 +157,13 @@ footer {
         font-size: 14pt;
     }
 
-    .education {
-        display: flex;
-        flex-wrap: wrap;
+    .email, .telepon, .linkedin {
+        width: 100%;
+    }
+
+
+    footer {
+        font-size: 10px;
     }
 }
 

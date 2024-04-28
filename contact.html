@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunawan - Contact</title>
+    <link rel="icon" type="image/x-icon" href="asset/img/ninja.png">
+    <link rel="stylesheet" href="style/contact-style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Keania+One&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h1 class="text-logo">
+            Gunawan
+        </h1>
+        <ul class="routing">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="education.html">Education</a>
+            </li>
+            <li>
+                <a href="project.html">Projects</a>
+            </li>
+            <li>
+                <a href="resume.html">Resume</a>
+            </li>
+            <li>
+                <a href="contact.html" style="color: #FBA834;">Contact</a>
+                <div class="box" style="background-color: #FBA834; width: 50px; height: 8px;"></div>
+            </li>
+        </ul>
+        <img src="/asset/img/menu.png" alt="" srcset="" onclick="showModal()" id="menu">
+    </nav>
+    <div class="container">
+        <div class="modal" id="modal">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="home">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        <span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="education.html">
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="project.html">
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="resume.html">
+                        <span>Resume</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" style="color: #FBA834;">
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <main>
+            <h2>Contact</h2>
+            <div class="contact">
+                <div class="email">
+                    <img src="asset/img/email.png" alt="" srcset="">
+                    <span>gunawann.dev@gmail.com</span>
+                </div>
+                <div class="telepon">
+                    <img src="asset/img/email.png" alt="" srcset="">
+                    <span>082136102653</span>
+                </div>
+                <div class="linkedin">
+                    <a href="https://www.linkedin.com/in/gunawan-%E2%80%8E-8b44b7214/">
+                        <img src="asset/img/linkedin.png" alt="" srcset="">
+                        <span>Linkedin</span>
+                    </a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            Made with ❤️ by Gunawan
+        </footer>
+    </div>
+
+    <script type="text/javascript">
+        function showModal() {
+            if (document.getElementById("modal").style.display == "block") {
+                document.getElementById("modal").style.display = "none";
+                document.getElementById("menu").setAttribute("src", "asset/img/menu.png")
+            }else{
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("menu").setAttribute("src", "asset/img/Close.png")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -57,25 +57,41 @@ ul li a:hover {
     font-size: 16pt;
 }
 
-
-.education {
+.link-projects {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 4px;
 }
-.unnes, .bangkit, .binar {
-    width: 335px;
+
+.all, .android, .java, .website {
     background-color: black;
+    padding: 6px 16px;
+    border-radius: 4%;
 }
-.edu-text {
-    padding: 8px;
-}
-
-.certifications {
+.projects {
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
+.project-img {
+    width: 350px;
+    height: 300px;
+}
+
+.box-project {
+    text-align: center;
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+
+.box-project h2{
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
 footer {
     position: relative;
     margin-top: 30px;
@@ -152,9 +168,5 @@ footer {
         font-size: 14pt;
     }
 
-    .education {
-        display: flex;
-        flex-wrap: wrap;
-    }
 }
 

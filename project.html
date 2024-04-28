@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunawan - Project</title>
+    <link rel="icon" type="image/x-icon" href="asset/img/ninja.png">
+    <link rel="stylesheet" href="style/projects-style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Keania+One&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h1 class="text-logo">
+            Gunawan
+        </h1>
+        <ul class="routing">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="education.html">Education</a>
+            </li>
+            <li>
+                <a href="project.html" style="color: #FBA834;">Projects</a>
+                <div class="box" style="background-color: #FBA834; width: 50px; height: 8px;"></div>
+            </li>
+            <li>
+                <a href="resume.html">Resume</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+        <img src="/asset/img/menu.png" alt="" srcset="" onclick="showModal()" id="menu">
+    </nav>
+    <div class="container">
+        <div class="modal" id="modal">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="home">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        <span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="education.html">
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="project.html" style="color: #FBA834;">
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="resume.html">
+                        <span>Resume</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <main>
+            <h2>My Projects</h2>
+            <div class="link-projects">
+                <div class="all" id="all" onclick="showProject('all')" style="cursor: pointer;">All</div>
+                <div class="android" id="android" onclick="showProject('android')" style="cursor: pointer;">Android</div>
+                <div class="java" id="java" onclick="showProject('java')" style="cursor: pointer;">Java</div>
+                <div class="website" id="website" onclick="showProject('website')" style="cursor: pointer;">Website</div>
+            </div>
+            <div class="projects" id="projects">
+                
+            </div>
+        </main>
+        <footer>
+            Made with ❤️ by Gunawan
+        </footer>
+    </div>
+    <script type="text/javascript">
+        function showModal() {
+            if (document.getElementById("modal").style.display == "block") {
+                document.getElementById("modal").style.display = "none";
+                document.getElementById("menu").setAttribute("src", "asset/img/menu.png")
+            }else{
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("menu").setAttribute("src", "asset/img/Close.png")
+            }
+        }
+
+        const projects = {
+            "android" : [
+                {
+                    "name" : "Wasteless",
+                    "img" : "asset/img/wasteless.png",
+                    "link" : "https://github.com/C23-PC629-WasteLess-Indonesia"
+                },
+                {
+                    "name" : "Story App",
+                    "img" : "asset/img/storyapp.png",
+                    "link" : "https://github.com/Gunawann20/MyStory_App"
+                }
+            ],
+            "java" : [
+                {
+                    "name" : "Pragos Academy Api",
+                    "img" : "asset/img/pragosapi.png",
+                    "link" : "https://github.com/Edu-Pulse/pragos-academy-api"
+                }
+            ],
+            "website" : [
+                {
+                    "name" : "Landing Page PT Werguyasa",
+                    "img" : "asset/img/werguyasa.png",
+                    "link" : "https://werguyasa.id/"
+                }
+            ]
+        }
+
+        function showProjectsByCategory(name) {
+
+            let parent = document.getElementById("projects");
+            parent.innerHTML = "";
+            if (name == "all") {
+                for(project in projects){
+                    projects[project].forEach(element => {
+                        
+                        let elementLink = document.createElement('a');
+                        let elementH = document.createElement('h2');
+                        let elementImg = document.createElement("img");
+                        let elementDiv = document.createElement('div');
+
+                        elementH.textContent = element.name;
+                        elementImg.setAttribute("src", element.img);
+                        elementLink.setAttribute("href", element.link);
+
+                        elementImg.setAttribute("class", "project-img");
+                        elementDiv.setAttribute("class", "box-project");
+
+                        elementDiv.appendChild(elementImg);
+                        elementDiv.appendChild(elementH);
+                        elementLink.appendChild(elementDiv);
+                        parent.appendChild(elementLink);
+                    });
+                }
+            }else{
+                projects[name].forEach(element => {
+                        
+                        let elementLink = document.createElement('a');
+                        let elementH = document.createElement('h2');
+                        let elementImg = document.createElement("img");
+                        let elementDiv = document.createElement('div');
+
+                        elementH.textContent = element.name;
+                        elementImg.setAttribute("src", element.img);
+                        elementLink.setAttribute("href", element.link);
+
+                        elementImg.setAttribute("class", "project-img");
+                        elementDiv.setAttribute("class", "box-project")
+
+                        elementDiv.appendChild(elementImg);
+                        elementDiv.appendChild(elementH);
+                        elementLink.appendChild(elementDiv);
+                        parent.appendChild(elementLink);
+                    });
+            }
+        }
+        const category = ["all", "android", "website", "java"]
+        let projectActive = 'all'
+        
+        function showProject(name){
+            showProjectsByCategory(name);
+            document.getElementById(name).style.backgroundColor = "#FBA834";
+            category.forEach(element => {
+                if(element != name){
+                    document.getElementById(element).style.backgroundColor = "black";
+                }
+            });
+        }
+
+        showProjectsByCategory("all");
+        document.getElementById("all").style.backgroundColor = "#FBA834";
+
+    </script>
+</body>
+</html>
