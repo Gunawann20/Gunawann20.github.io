@@ -64,7 +64,7 @@
                     />
                 </div>
             </h2>
-            <h2>I’m <span class="text-gold">Software Engineer - Android</span></h2>
+            <h2>I’m <span class="text-gold" id="Role">Software Engineer - Android</span></h2>
             <ul class="routing">
                 <li>
                     <a href="index.html">
@@ -131,6 +131,21 @@
                 document.getElementById("menu").setAttribute("src", "asset/img/Close.png")
             }
         }
+
+        let setRole = document.getElementById("Role");
+        const roles = [
+            "Software Engineer - Android",
+            "Backend Developer - Java",
+            "Web Developer - Laravel"
+        ]
+        let index = 0;
+        
+        function displayRole() {
+            setRole.innerText = roles[index];
+            index = (index + 1) % roles.length;
+        }
+
+        setInterval(displayRole, 1500);
     </script>
 </body>
 </html>
