@@ -10,6 +10,30 @@
       href="https://fonts.googleapis.com/css2?family=Keania+One&display=swap"
       rel="stylesheet"
     />
+    <style>
+    .typeWriter {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 24px;
+      color: white;
+      background-color: blue;
+    }
+
+    #typewriter {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 24px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid white;
+      animation: blink 0.75s step-end infinite;
+      color: white;
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+  </style>
 </head>
 <body>
     <div class="container">
@@ -64,7 +88,7 @@
                     />
                 </div>
             </h2>
-            <h2>I’m <span class="text-gold" id="Role">Software Engineer - Android</span></h2>
+            <div class="typeWriter">I'm <span id="typewriter"></span></div>
             <ul class="routing">
                 <li>
                     <a href="index.html">
@@ -131,21 +155,41 @@
                 document.getElementById("menu").setAttribute("src", "asset/img/Close.png")
             }
         }
-
-        let setRole = document.getElementById("Role");
-        const roles = [
-            "Software Engineer - Android",
-            "Backend Developer - Java",
-            "Web Developer - Laravel"
-        ]
-        let index = 0;
-        
-        function displayRole() {
-            setRole.innerText = roles[index];
-            index = (index + 1) % roles.length;
-        }
-
-        setInterval(displayRole, 1500);
     </script>
+    <script>
+    const texts = ["Software Engineer - Android", "Backend Developer - Java", "Web Developer - Laravel"];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeWriter() {
+      const element = document.getElementById("typewriter");
+      const currentText = texts[textIndex];
+
+      if (isDeleting) {
+        element.textContent = currentText.substring(0, charIndex);
+        charIndex--;
+        if (charIndex < 0) {
+          isDeleting = false;
+          textIndex = (textIndex + 1) % texts.length;
+          setTimeout(typeWriter, 500);
+          return;
+        }
+      } else {
+        element.textContent = currentText.substring(0, charIndex);
+        charIndex++;
+        if (charIndex > currentText.length) {
+          isDeleting = true;
+          setTimeout(typeWriter, 1000);
+          return;
+        }
+      }
+
+      const typingSpeed = isDeleting ? 50 : 100;
+      setTimeout(typeWriter, typingSpeed);
+    }
+
+    document.addEventListener("DOMContentLoaded", typeWriter);
+  </script>
 </body>
 </html>
