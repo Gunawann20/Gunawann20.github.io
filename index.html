@@ -1,193 +1,564 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gunawan - Portofolio</title>
-    <link rel="icon" type="image/x-icon" href="asset/img/ninja.png">
-    <link rel="stylesheet" href="style/index-style.css">
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gunawan - Software Engineer</title>
+    <link rel="icon" type="image/x-icon" href="asset/img/ninja.png" />
+    <link rel="stylesheet" href="style/index-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Keania+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-    .typeWriter {
-      margin-top: 4px;
-      font-size: 24px;
-      color: white;
-    }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="spotlight"></div>
 
-    #typewriter {
-      font-size: 24px;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid #FBA834;
-      animation: blink 0.75s step-end infinite;
-      color: #FBA834;
-    }
-
-    @keyframes blink {
-      50% {
-        border-color: transparent;
-      }
-    }
-  </style>
-</head>
-<body>
     <div class="container">
-        <nav>
-            <img src="/asset/img/menu.png" alt="" srcset="" onclick="showModal()" id="menu">
-        </nav>
-        <div class="modal" id="modal">
-            <ul>
+      <!-- Left Sidebar - Fixed -->
+      <header class="sidebar">
+        <div class="sidebar-content">
+          <div>
+            <h1>Gunawan</h1>
+            <h2>Software Engineer</h2>
+            <p class="tagline">
+              I build accessible, pixel-perfect digital experiences for the web
+              and mobile.
+            </p>
+
+            <nav class="nav-menu" aria-label="In-page jump links">
+              <ul>
                 <li>
-                    <a href="index.html" style="color: #FBA834;">
-                        <span class="home">Home</span>
-                    </a>
+                  <a href="#about" class="nav-link active"
+                    ><span class="nav-indicator"></span
+                    ><span class="nav-text">About</span></a
+                  >
                 </li>
                 <li>
-                    <a href="about.html">
-                        <span>About</span>
-                    </a>
+                  <a href="#experience" class="nav-link"
+                    ><span class="nav-indicator"></span
+                    ><span class="nav-text">Experience</span></a
+                  >
                 </li>
                 <li>
-                    <a href="education.html">
-                        <span>Education</span>
-                    </a>
+                  <a href="#education" class="nav-link"
+                    ><span class="nav-indicator"></span
+                    ><span class="nav-text">Education</span></a
+                  >
                 </li>
                 <li>
-                    <a href="project.html">
-                        <span>Projects</span>
-                    </a>
+                  <a href="#projects" class="nav-link"
+                    ><span class="nav-indicator"></span
+                    ><span class="nav-text">Projects</span></a
+                  >
                 </li>
-                <li>
-                    <a href="resume.html">
-                        <span>Resume</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="contact.html">
-                        <span>Contact</span>
-                    </a>
-                </li>
-            </ul>
+              </ul>
+            </nav>
+          </div>
+
+          <ul class="social-links">
+            <li>
+              <a
+                href="https://github.com/Gunawann20"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  class="social-icon"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/gunawan-%E2%80%8E-8b44b7214/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="social-icon"
+                >
+                  <path
+                    d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:gunawann.dev@gmail.com" aria-label="Email">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="social-icon"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
-        <main>
-            <h1>
-                Gunawan
-            </h1>
-            <h2>
-                <div class="text-animation">
-                    Hi, Folks!
-                    <img
-                    src="asset/img/hand.gif"
-                    alt="hand"
-                    class="hand-animation"
-                    />
+      </header>
+
+      <!-- Right Content - Scrollable -->
+      <main class="main-content">
+        <!-- About Section -->
+        <section id="about" class="section">
+          <div class="section-content">
+            <p class="about-text">
+              Back in 2020, I decided to dive into the world of software
+              development and discovered my passion for creating things that
+              live on the internet and mobile devices. Fast-forward to today,
+              and I've had the privilege of building software for
+              <span class="highlight">universities</span>,
+              <span class="highlight">startups</span>, and
+              <span class="highlight">educational programs</span>.
+            </p>
+            <p class="about-text">
+              My main focus these days is building accessible, inclusive
+              products and digital experiences for web and mobile platforms. I'm
+              particularly interested in
+              <span class="highlight">Android development</span>,
+              <span class="highlight"
+                >backend systems with Java Spring Boot</span
+              >, and
+              <span class="highlight">web applications with Laravel</span>.
+            </p>
+            <p class="about-text">
+              I graduated from Universitas Negeri Semarang with a Bachelor's
+              degree in Computer Science (GPA 3.81/4.00) in 2024. My research
+              focused on using Convolutional Neural Networks with Concatenated
+              ResNet50-MobileNet Architecture to classify types of tomato leaf
+              diseases. I've also participated in
+              <span class="highlight">Bangkit Academy 2023</span> as a Mobile
+              Development student and completed
+              <span class="highlight">Binar Academy's Backend Java Course</span>
+              through the Independent Study program.
+            </p>
+            <p class="about-text">
+              When I'm not coding, you can find me exploring new technologies,
+              contributing to open-source projects, or learning about the latest
+              trends in software engineering.
+            </p>
+          </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+          <div class="section-content">
+            <div class="experience-list">
+              <div class="experience-item">
+                <div class="experience-header">
+                  <div class="experience-date">June 2024 — Present</div>
+                  <div class="experience-details">
+                    <h3 class="experience-title">
+                      Backend Developer · CV Indokoding Sukses Makmur
+                    </h3>
+                    <p class="experience-description">
+                      Enhanced database efficiency by optimizing SQL queries,
+                      significantly improving data retrieval speed. Spearheaded
+                      the design and implementation of innovative website
+                      features, leading to a more seamless and intuitive user
+                      experience. Proactively identified and resolved bugs,
+                      ensuring reliable and smooth web application performance.
+                      Developed custom APIs tailored to frontend team requests,
+                      improving system integration and functionality.
+                    </p>
+                    <ul class="tech-stack">
+                      <li>PHP</li>
+                      <li>Laravel</li>
+                      <li>MySQL</li>
+                      <li>REST API</li>
+                      <li>Git</li>
+                    </ul>
+                  </div>
                 </div>
-            </h2>
-            <div class="typeWriter">I'm <span id="typewriter" class="text-gold"></span></div>
-            <ul class="routing">
-                <li>
-                    <a href="index.html">
-                        <h3 class="home">Home</h3>
-                    </a>
-                    <div class="box"></div>
-                </li>
-                <li>
-                    <a href="about.html">
-                        <h3>About</h3>
-                    </a>
-                </li>
-                <li>
-                    <a href="education.html">
-                        <h3>Education</h3>
-                    </a>
-                </li>
-                <li>
-                    <a href="project.html">
-                        <h3>Projects</h3>
-                    </a>
-                </li>
-                <li>
-                    <a href="resume.html">
-                        <h3>Resume</h3>
-                    </a>
-                </li>
-                <li>
-                    <a href="contact.html">
-                        <h3>Contact</h3>
-                    </a>
-                </li>
-            </ul>
-            <ul class="social-media">
-                <li class="li-github">
-                    <a href="https://github.com/Gunawann20">
-                        <img src="asset/img/github.png" alt="github" class="github">
-                    </a>
-                </li>
-                <li class="li-linkedin">
-                    <a href="https://www.linkedin.com/in/gunawan-%E2%80%8E-8b44b7214/">
-                        <img src="asset/img/linkedin.png" alt="linkedin" class="linkedin">
-                    </a>
-                </li>
-                <li class="li-email">
-                    <a href="contact.html">
-                        <img src="asset/img/email.png" alt="email" class="email">
-                    </a>
-                </li>
-            </ul>
-        </main>
-        <footer>
-            Made with ❤️ by Gunawan
+              </div>
+
+              <div class="experience-item">
+                <div class="experience-header">
+                  <div class="experience-date">July 2024 — Present</div>
+                  <div class="experience-details">
+                    <h3 class="experience-title">
+                      Full Stack Developer · PT Estu Lentera Indo Teknologi
+                    </h3>
+                    <p class="experience-description">
+                      Developed and maintained Laboratory Information Management
+                      System (LIMS) applications using PHP and Laravel.
+                      Conducted testing and maintenance to ensure system
+                      functionality and reliability. Managed and optimized
+                      existing LIMS projects to improve performance and user
+                      experience. Prepared and executed new LIMS projects,
+                      ensuring timely delivery and quality. Integrated the
+                      system with Satu Sehat for enhanced interoperability.
+                    </p>
+                    <ul class="tech-stack">
+                      <li>PHP</li>
+                      <li>Laravel</li>
+                      <li>MySQL</li>
+                      <li>JavaScript</li>
+                      <li>API Integration</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="experience-item">
+                <div class="experience-header">
+                  <div class="experience-date">Aug 2022 — Dec 2022</div>
+                  <div class="experience-details">
+                    <h3 class="experience-title">
+                      Backend Developer · Kedaireka PT Allure Alluminio
+                    </h3>
+                    <p class="experience-description">
+                      Collaborated with UI and frontend teams to develop and
+                      implement new website features. Designed and developed
+                      robust APIs to support frontend functionalities.
+                    </p>
+                    <ul class="tech-stack">
+                      <li>PHP</li>
+                      <li>Laravel</li>
+                      <li>MySQL</li>
+                      <li>REST API</li>
+                      <li>Git</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="resume-link">
+              <a href="resume.html" target="_blank" class="inline-link">
+                View Full Résumé
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="inline-icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+          <div class="section-content">
+            <div class="experience-list">
+              <div class="experience-item">
+                <div class="experience-header">
+                  <div class="experience-date">2020 — 2024</div>
+                  <div class="experience-details">
+                    <h3 class="experience-title">
+                      Bachelor of Computer Science · Universitas Negeri Semarang
+                    </h3>
+                    <p class="experience-description">
+                      Graduated with GPA 3.81/4.00. Conducted research on
+                      Convolutional Neural Network Using Concatenated
+                      ResNet50-MobileNet Architecture to Classify Types of
+                      Tomato Leaf Diseases.
+                    </p>
+                    <ul class="tech-stack">
+                      <li>Machine Learning</li>
+                      <li>Deep Learning</li>
+                      <li>CNN</li>
+                      <li>Python</li>
+                      <li>TensorFlow</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="experience-item">
+                <div class="experience-header">
+                  <div class="experience-date">Feb 2023 — Jul 2023</div>
+                  <div class="experience-details">
+                    <h3 class="experience-title">
+                      Mobile Development · Bangkit Academy 2023
+                    </h3>
+                    <p class="experience-description">
+                      Learned Kotlin programming, Android application
+                      development, and various components like UI, Animation,
+                      Localization, etc. Collaborated with the team using GitHub
+                      and Trello.
+                    </p>
+                    <ul class="tech-stack">
+                      <li>Kotlin</li>
+                      <li>Android</li>
+                      <li>Jetpack Compose</li>
+                      <li>GitHub</li>
+                      <li>Trello</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="experience-item">
+                <div class="experience-header">
+                  <div class="experience-date">Aug 2023 — Dec 2023</div>
+                  <div class="experience-details">
+                    <h3 class="experience-title">
+                      Backend Java Course · SIB Binar Academy 2023
+                    </h3>
+                    <p class="experience-description">
+                      Learned Java programming, OOP, functional programming, and
+                      unit testing. Created ERD and CRUD using Spring Framework.
+                      Developed Restful API with Spring Web. Implemented
+                      security for authorization and authentication.
+                    </p>
+                    <ul class="tech-stack">
+                      <li>Java</li>
+                      <li>Spring Boot</li>
+                      <li>Spring Security</li>
+                      <li>PostgreSQL</li>
+                      <li>REST API</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+          <div class="section-content">
+            <div class="project-list">
+              <a href="#" class="project-card">
+                <div class="project-image">
+                  <img
+                    src="asset/img/wasteless.png"
+                    alt="Manufacturing Information System"
+                  />
+                </div>
+                <div class="project-details">
+                  <h3 class="project-title">
+                    Manufacturing Information System
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="inline-icon"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </h3>
+                  <p class="project-description">
+                    A comprehensive web-based system for PT Allure Aluminio to
+                    manage manufacturing processes, track production, and
+                    generate detailed reports.
+                  </p>
+                  <ul class="tech-stack">
+                    <li>Laravel</li>
+                    <li>MySQL</li>
+                    <li>Bootstrap</li>
+                    <li>Chart.js</li>
+                  </ul>
+                </div>
+              </a>
+
+              <a href="#" class="project-card">
+                <div class="project-image">
+                  <img
+                    src="asset/img/storyapp.png"
+                    alt="Android E-Commerce App"
+                  />
+                </div>
+                <div class="project-details">
+                  <h3 class="project-title">
+                    Android E-Commerce App
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="inline-icon"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </h3>
+                  <p class="project-description">
+                    Mobile shopping application built with Kotlin featuring
+                    product browsing, cart management, and secure checkout
+                    process.
+                  </p>
+                  <ul class="tech-stack">
+                    <li>Kotlin</li>
+                    <li>Jetpack Compose</li>
+                    <li>Retrofit</li>
+                    <li>Room Database</li>
+                  </ul>
+                </div>
+              </a>
+
+              <a href="#" class="project-card">
+                <div class="project-image">
+                  <img
+                    src="asset/img/pragosapi.png"
+                    alt="RESTful API with Spring Boot"
+                  />
+                </div>
+                <div class="project-details">
+                  <h3 class="project-title">
+                    RESTful API with Spring Boot
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="inline-icon"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </h3>
+                  <p class="project-description">
+                    Backend service with comprehensive API endpoints, JWT
+                    authentication, and PostgreSQL database integration for a
+                    task management system.
+                  </p>
+                  <ul class="tech-stack">
+                    <li>Java</li>
+                    <li>Spring Boot</li>
+                    <li>PostgreSQL</li>
+                    <li>JWT</li>
+                    <li>Swagger</li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="archive-link">
+              <a href="project.html" class="inline-link">
+                View Full Project Archive
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="inline-icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>
+            Loosely designed in
+            <a href="https://www.figma.com/" target="_blank" class="footer-link"
+              >Figma</a
+            >
+            and coded in
+            <a
+              href="https://code.visualstudio.com/"
+              target="_blank"
+              class="footer-link"
+              >Visual Studio Code</a
+            >. Built with vanilla HTML, CSS, and JavaScript. All text is set in
+            the
+            <a href="https://rsms.me/inter/" target="_blank" class="footer-link"
+              >Inter</a
+            >
+            typeface.
+          </p>
         </footer>
+      </main>
     </div>
 
-    <script type="text/javascript">
-        function showModal() {
-            if (document.getElementById("modal").style.display == "block") {
-                document.getElementById("modal").style.display = "none";
-                document.getElementById("menu").setAttribute("src", "asset/img/menu.png")
-            }else{
-                document.getElementById("modal").style.display = "block";
-                document.getElementById("menu").setAttribute("src", "asset/img/Close.png")
-            }
-        }
-    </script>
     <script>
-    const texts = ["Software Engineer - Android", "Backend Developer - Java", "Web Developer - Laravel"];
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
+      // Spotlight effect
+      const spotlight = document.getElementById("spotlight");
+      document.addEventListener("mousemove", (e) => {
+        spotlight.style.background = `radial-gradient(600px at ${e.clientX}px ${e.clientY}px, rgba(100, 255, 218, 0.1), transparent 80%)`;
+      });
 
-    function typeWriter() {
-      const element = document.getElementById("typewriter");
-      const currentText = texts[textIndex];
+      // Smooth scroll and active nav
+      const sections = document.querySelectorAll(".section");
+      const navLinks = document.querySelectorAll(".nav-link");
 
-      if (isDeleting) {
-        element.textContent = currentText.substring(0, charIndex);
-        charIndex--;
-        if (charIndex < 0) {
-          isDeleting = false;
-          textIndex = (textIndex + 1) % texts.length;
-          setTimeout(typeWriter, 500);
-          return;
-        }
-      } else {
-        element.textContent = currentText.substring(0, charIndex);
-        charIndex++;
-        if (charIndex > currentText.length) {
-          isDeleting = true;
-          setTimeout(typeWriter, 1000);
-          return;
-        }
-      }
+      // Set initial active state for About section
+      navLinks[0].classList.add("active");
 
-      const typingSpeed = isDeleting ? 50 : 100;
-      setTimeout(typeWriter, typingSpeed);
-    }
+      // Use Intersection Observer for better detection
+      const observerOptions = {
+        root: null,
+        rootMargin: "-20% 0px -60% 0px",
+        threshold: 0,
+      };
 
-    document.addEventListener("DOMContentLoaded", typeWriter);
-  </script>
-</body>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            navLinks.forEach((link) => {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === "#" + id) {
+                link.classList.add("active");
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+
+      // Smooth scroll for nav clicks
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute("href");
+          const targetSection = document.querySelector(targetId);
+          targetSection.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
 </html>

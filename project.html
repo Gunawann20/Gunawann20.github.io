@@ -1,200 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gunawan - Project</title>
-    <link rel="icon" type="image/x-icon" href="asset/img/ninja.png">
-    <link rel="stylesheet" href="style/projects-style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Projects - Gunawan</title>
+    <link rel="icon" type="image/x-icon" href="asset/img/ninja.png" />
+    <link rel="stylesheet" href="style/projects-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Keania+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
-    <nav>
-        <h1 class="text-logo">
-            Gunawan
-        </h1>
-        <ul class="routing">
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="about.html">About</a>
-            </li>
-            <li>
-                <a href="education.html">Education</a>
-            </li>
-            <li>
-                <a href="project.html" style="color: #FBA834;">Projects</a>
-                <div class="box" style="background-color: #FBA834; width: 50px; height: 8px;"></div>
-            </li>
-            <li>
-                <a href="resume.html">Resume</a>
-            </li>
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-        </ul>
-        <img src="/asset/img/menu.png" alt="" srcset="" onclick="showModal()" id="menu">
-    </nav>
+  </head>
+  <body>
+    <div id="spotlight"></div>
+
     <div class="container">
-        <div class="modal" id="modal">
-            <ul>
-                <li>
-                    <a href="index.html">
-                        <span class="home">Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="about.html">
-                        <span>About</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="education.html">
-                        <span>Education</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="project.html" style="color: #FBA834;">
-                        <span>Projects</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="resume.html">
-                        <span>Resume</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="contact.html">
-                        <span>Contact</span>
-                    </a>
-                </li>
-            </ul>
+      <a href="index.html" class="back-link">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="back-icon"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        Gunawan
+      </a>
+
+      <main>
+        <h1>All Projects</h1>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <a
+              href="https://github.com/C23-PC629-WasteLess-Indonesia"
+              target="_blank"
+              class="project-link"
+            >
+              <div class="project-image">
+                <img src="asset/img/wasteless.png" alt="Wasteless" />
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">
+                  Wasteless
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="inline-icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </h3>
+                <p class="project-description">
+                  Android application for food waste management using machine
+                  learning to classify food conditions and connect with food
+                  banks.
+                </p>
+                <ul class="tech-stack">
+                  <li>Kotlin</li>
+                  <li>Jetpack Compose</li>
+                  <li>ML Kit</li>
+                  <li>Retrofit</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <a
+              href="https://github.com/Gunawann20/MyStory_App"
+              target="_blank"
+              class="project-link"
+            >
+              <div class="project-image">
+                <img src="asset/img/storyapp.png" alt="Story App" />
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">
+                  Story App
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="inline-icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </h3>
+                <p class="project-description">
+                  A social media Android app where users can share their stories
+                  with photos, locations, and view others' stories on an
+                  interactive map.
+                </p>
+                <ul class="tech-stack">
+                  <li>Kotlin</li>
+                  <li>MVVM</li>
+                  <li>Google Maps</li>
+                  <li>Camera API</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <a
+              href="https://github.com/Edu-Pulse/pragos-academy-api"
+              target="_blank"
+              class="project-link"
+            >
+              <div class="project-image">
+                <img src="asset/img/pragosapi.png" alt="Pragos Academy API" />
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">
+                  Pragos Academy API
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="inline-icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </h3>
+                <p class="project-description">
+                  RESTful API backend for an online learning platform with
+                  course management, user authentication, and progress tracking
+                  features.
+                </p>
+                <ul class="tech-stack">
+                  <li>Java</li>
+                  <li>Spring Boot</li>
+                  <li>PostgreSQL</li>
+                  <li>JWT</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <a
+              href="https://werguyasa.id/"
+              target="_blank"
+              class="project-link"
+            >
+              <div class="project-image">
+                <img src="asset/img/werguyasa.png" alt="PT Werguyasa" />
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">
+                  Landing Page PT Werguyasa
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="inline-icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </h3>
+                <p class="project-description">
+                  Modern company profile website showcasing services, portfolio,
+                  and contact information with responsive design.
+                </p>
+                <ul class="tech-stack">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Responsive</li>
+                </ul>
+              </div>
+            </a>
+          </div>
         </div>
-        <main>
-            <h2>My Projects</h2>
-            <div class="link-projects">
-                <div class="all" id="all" onclick="showProject('all')" style="cursor: pointer;">All</div>
-                <div class="android" id="android" onclick="showProject('android')" style="cursor: pointer;">Android</div>
-                <div class="java" id="java" onclick="showProject('java')" style="cursor: pointer;">Java</div>
-                <div class="website" id="website" onclick="showProject('website')" style="cursor: pointer;">Website</div>
-            </div>
-            <div class="projects" id="projects">
-                
-            </div>
-        </main>
-        <footer>
-            Made with ❤️ by Gunawan
-        </footer>
+      </main>
+
+      <footer class="footer">
+        <p>
+          Designed in <span class="highlight">Figma</span> and coded in
+          <span class="highlight">Visual Studio Code</span>. Built with vanilla
+          HTML & CSS, deployed on Vercel.
+        </p>
+      </footer>
     </div>
-    <script type="text/javascript">
-        function showModal() {
-            if (document.getElementById("modal").style.display == "block") {
-                document.getElementById("modal").style.display = "none";
-                document.getElementById("menu").setAttribute("src", "asset/img/menu.png")
-            }else{
-                document.getElementById("modal").style.display = "block";
-                document.getElementById("menu").setAttribute("src", "asset/img/Close.png")
-            }
-        }
 
-        const projects = {
-            "android" : [
-                {
-                    "name" : "Wasteless",
-                    "img" : "asset/img/wasteless.png",
-                    "link" : "https://github.com/C23-PC629-WasteLess-Indonesia"
-                },
-                {
-                    "name" : "Story App",
-                    "img" : "asset/img/storyapp.png",
-                    "link" : "https://github.com/Gunawann20/MyStory_App"
-                }
-            ],
-            "java" : [
-                {
-                    "name" : "Pragos Academy Api",
-                    "img" : "asset/img/pragosapi.png",
-                    "link" : "https://github.com/Edu-Pulse/pragos-academy-api"
-                }
-            ],
-            "website" : [
-                {
-                    "name" : "Landing Page PT Werguyasa",
-                    "img" : "asset/img/werguyasa.png",
-                    "link" : "https://werguyasa.id/"
-                }
-            ]
-        }
+    <script>
+      // Spotlight effect
+      const spotlight = document.getElementById("spotlight");
 
-        function showProjectsByCategory(name) {
-
-            let parent = document.getElementById("projects");
-            parent.innerHTML = "";
-            if (name == "all") {
-                for(project in projects){
-                    projects[project].forEach(element => {
-                        
-                        let elementLink = document.createElement('a');
-                        let elementH = document.createElement('h2');
-                        let elementImg = document.createElement("img");
-                        let elementDiv = document.createElement('div');
-
-                        elementH.textContent = element.name;
-                        elementImg.setAttribute("src", element.img);
-                        elementLink.setAttribute("href", element.link);
-
-                        elementImg.setAttribute("class", "project-img");
-                        elementDiv.setAttribute("class", "box-project");
-
-                        elementDiv.appendChild(elementImg);
-                        elementDiv.appendChild(elementH);
-                        elementLink.appendChild(elementDiv);
-                        parent.appendChild(elementLink);
-                    });
-                }
-            }else{
-                projects[name].forEach(element => {
-                        
-                        let elementLink = document.createElement('a');
-                        let elementH = document.createElement('h2');
-                        let elementImg = document.createElement("img");
-                        let elementDiv = document.createElement('div');
-
-                        elementH.textContent = element.name;
-                        elementImg.setAttribute("src", element.img);
-                        elementLink.setAttribute("href", element.link);
-
-                        elementImg.setAttribute("class", "project-img");
-                        elementDiv.setAttribute("class", "box-project")
-
-                        elementDiv.appendChild(elementImg);
-                        elementDiv.appendChild(elementH);
-                        elementLink.appendChild(elementDiv);
-                        parent.appendChild(elementLink);
-                    });
-            }
-        }
-        const category = ["all", "android", "website", "java"]
-        let projectActive = 'all'
-        
-        function showProject(name){
-            showProjectsByCategory(name);
-            document.getElementById(name).style.backgroundColor = "#FBA834";
-            category.forEach(element => {
-                if(element != name){
-                    document.getElementById(element).style.backgroundColor = "black";
-                }
-            });
-        }
-
-        showProjectsByCategory("all");
-        document.getElementById("all").style.backgroundColor = "#FBA834";
-
+      document.addEventListener("mousemove", (e) => {
+        spotlight.style.background = `radial-gradient(600px at ${e.clientX}px ${e.clientY}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
+      });
     </script>
-</body>
+  </body>
 </html>

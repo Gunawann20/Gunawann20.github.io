@@ -1,177 +1,219 @@
-body {
-    padding:0px;
-    margin:0px;
-    font-family: "Keania One", sans-serif;
-    background-color: #090F44;
-    color: aliceblue;
-    height: max-content;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.text-logo {
-    margin: 0px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    font-size: 40pt;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #0f172a;
+  color: #94a3b8;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+#spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  transition: background 0.15s;
 }
 
 .container {
-    margin: auto;
-    margin-left: 20%;
-    margin-right: 20%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 96px 48px;
+  position: relative;
+  z-index: 5;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    background-color: black;
-    padding-left: 20%;
-    padding-right: 20%;
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #5eead4;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 48px;
+  transition: all 0.3s ease;
 }
 
-#menu {
-    display: none;
+.back-link:hover {
+  gap: 12px;
 }
 
-#modal {
-    display: none;
+.back-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
 }
 
-ul {
-    display: flex;
-    list-style: none;
-    margin-left: auto;
+.back-link:hover .back-icon {
+  transform: translateX(-4px);
 }
 
-ul li {
-    margin-right: 30px;
-}
-ul li a {
-    text-decoration: none;
-    color: aliceblue;
-    font-size: 16pt;
-}
-
-ul li a:hover {
-    text-decoration: none;
-    color: #FBA834;
-    font-size: 16pt;
+main h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 64px;
+  letter-spacing: -0.025em;
 }
 
-.link-projects {
-    display: flex;
-    gap: 4px;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+  margin-bottom: 96px;
 }
 
-.all, .android, .java, .website {
-    background-color: black;
-    padding: 6px 16px;
-    border-radius: 4%;
-}
-.projects {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.project-img {
-    width: 350px;
-    height: 300px;
+.project-card {
+  position: relative;
 }
 
-.box-project {
-    text-align: center;
-    color: aliceblue;
-    margin-bottom: 20px;
+.project-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.3s ease;
 }
 
-.box-project h2{
-    margin: 0;
+.project-link:hover {
+  background: rgba(148, 163, 184, 0.05);
+  box-shadow: inset 0 1px 0 0 rgba(148, 163, 184, 0.1);
 }
 
-a {
-    text-decoration: none;
+.project-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
 }
 
-footer {
-    position: relative;
-    margin-top: 30px;
-    margin-bottom: 20px;
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-@media only screen and (max-width: 900px) {
-    .text-logo {
-        margin: 0px;
-        margin-top: 16px;
-        margin-bottom: 16px;
-        font-size: 20pt;
-    }
-    
-    .container {
-        margin: auto;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    
-    nav {
-        display: flex;
-        align-items: center;
-        background-color: black;
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    #menu {
-        display: block;
-        margin-left: auto;
-    }
-    
-    .routing {
-        display: none;
-    }
-    
-    footer {
-        position: relative;
-        margin-top: 40px;
-        font-size: 10px;
-    }
-
-    #modal {
-        background-color: aliceblue;
-        display: none;
-        color: black;
-        position: absolute;
-        width: 90%;
-        padding-top: 2px;
-        padding-bottom: 5px;
-        border-radius: 2%;
-    }
-
-    #modal ul {
-        list-style: none;
-        display: block;
-    }
-    #modal ul li{
-        list-style: none;
-        padding-top: 2px;
-        padding-bottom: 2px;
-    }
-
-    #modal ul li a {
-        text-decoration: none;
-        color: black;
-        font-size: 14pt;
-    }
-
-    #modal ul li a:hover {
-        text-decoration: none;
-        color: #FBA834;
-        font-size: 14pt;
-    }
-
-    .project-img {
-        width: 100%;
-        height: 300px;
-    }
-
+.project-link:hover .project-image img {
+  transform: scale(1.05);
 }
 
+.project-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover .project-title {
+  color: #5eead4;
+}
+
+.inline-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover .inline-icon {
+  transform: translate(4px, -4px);
+}
+
+.project-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin-bottom: 16px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tech-stack li {
+  font-size: 12px;
+  font-weight: 500;
+  color: #5eead4;
+  background: rgba(94, 234, 212, 0.1);
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+.footer {
+  padding: 48px 0;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.highlight {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 64px 32px;
+  }
+
+  main h1 {
+    font-size: 40px;
+    margin-bottom: 48px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 48px 20px;
+  }
+
+  main h1 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .back-link {
+    margin-bottom: 32px;
+  }
+}
